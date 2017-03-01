@@ -1,0 +1,47 @@
+<div class="row">
+	<div class="col-sm-2">
+	<a href="#/"><button class="btn btn-success">Back</button></a>
+	</div>
+</div>
+
+<div class="row tabs"  >
+			<div class="col-lg-6 topsong">
+				<h1>Top 50 All-Time</h1>
+				<table class="table" >
+				<thead>
+				<tr>
+					<th>#</th>
+					<th class="wid1">Song</th>
+					<th class="wid2">Artist</th>
+					<th>Plays</th>
+				</tr>
+				</thead>
+				<tr ng-repeat='song in topSongs'>
+					<td>{{song['@attr'].rank}}</td>
+					<td >{{song.name}}</td>
+					<td >{{song.artist.name}}</td>
+					<td>{{song.playcount}}</td>
+				</tr>
+			</table>
+			</div>
+
+			<div class="col-lg-6 topweek">
+				<h1>Top 50 of the Week</h1>
+				<table class="table" >
+				<thead>
+				<tr>
+					<th>#</th>
+					<th class="wid1">Song</th>
+					<th class="wid2">Artist</th>
+					<th>Plays</th>
+				</tr>
+				</thead>
+				<tr ng-repeat='week in topWeeks'>
+					<td>{{week['@attr'].rank}}</td>
+					<td >{{week.name}}</td>
+					<td >{{week.artist['#text']}}</td>
+					<td>{{week.playcount}}</td>
+				</tr>
+			</table>
+			</div>
+		</div>
